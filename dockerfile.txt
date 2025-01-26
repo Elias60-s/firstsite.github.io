@@ -1,14 +1,5 @@
-# Use Python 3.9 slim as the base image
-FROM python:3.9-slim
+# Use an official NGINX image as a base
+FROM nginx:latest
 
-# Copy all files from the current directory into the container's /app directory
-COPY . /app
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Install the Python dependencies specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Command to run the application
-CMD ["python", "app.py"]
+# Copy a custom index.html file to the NGINX server
+COPY index.html /usr/share/nginx/html/index.html
