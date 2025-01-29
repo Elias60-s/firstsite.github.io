@@ -1,4 +1,4 @@
-echo '{
+{
   "version": 2,
   "builds": [
     {
@@ -12,5 +12,4 @@ echo '{
       "dest": "/api/index.py"
     }
   ]
-}' > vercel.json
-
+}
