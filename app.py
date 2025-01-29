@@ -13,8 +13,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # Load student marks data
-with open("marks.json", "r") as f:
+with open("q-vercel-python.json", "r") as f:
     student_marks = json.load(f)  # Assuming marks are stored as {"name": marks}
 
 @app.get("/api")
